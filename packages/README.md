@@ -8,10 +8,10 @@ Expansion packs extend BMAD Method with specialized capabilities for specific us
 
 The original BMAD Method follows a simple, proven flow:
 
-```text
+````text
 Analyst → PM → Architect → SM → Dev
 (Brief) → (PRD) → (Architecture) → (Stories) → (Implementation)
-```
+```text
 
 This core flow remains clean and focused on getting from business requirements to working software.
 
@@ -62,21 +62,21 @@ expansion-pack-name/
 ├── templates/         # Document templates (.md)
 ├── tasks/            # Specialized tasks (.md)
 └── checklists/       # Validation checklists (.md)
-```
+````
 
 ## Installing an Expansion Pack
 
 ### Method 1: NPM Script
 
-```bash
+````bash
 npm run install:expansion <pack-name>
-```
+```text
 
 ### Method 2: Direct Script
 
 ```bash
 node tools/install-expansion-pack.js <pack-name>
-```
+````
 
 ### Method 3: Manual
 

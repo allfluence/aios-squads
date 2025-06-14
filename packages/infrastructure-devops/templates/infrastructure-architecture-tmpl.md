@@ -36,6 +36,7 @@ Output file location: `docs/infrastructure-architecture.md`]]
 [[LLM: Infrastructure Elicitation Options
 Present user with domain-specific elicitation options:
 "For the Infrastructure Overview section, I can explore:
+
 1. **Multi-Cloud Strategy Analysis** - Evaluate cloud provider options and vendor lock-in considerations
 2. **Regional Distribution Planning** - Analyze latency requirements and data residency needs
 3. **Environment Isolation Strategy** - Design security boundaries and resource segregation
@@ -93,6 +94,7 @@ Select an option (1-7):"]]
 [[LLM: Design network topology considering security zones, traffic patterns, and compliance requirements. Reference main architecture for service communication patterns.
 
 Create Mermaid diagram showing:
+
 - VPC/Network structure
 - Security zones and boundaries
 - Traffic flow patterns
@@ -158,6 +160,7 @@ graph TB
 [[LLM: Design data infrastructure based on data architecture from main system design. Consider data volumes, access patterns, compliance, and recovery requirements.
 
 Create data flow diagram showing:
+
 - Database topology
 - Replication patterns
 - Backup flows
@@ -193,12 +196,12 @@ Create data flow diagram showing:
 
 @{example: responsibility_matrix}
 
-| Component | Cloud Provider | Platform Team | Dev Team | Security Team |
-|-----------|---------------|---------------|----------|---------------|
-| Physical Security | ✓ | - | - | Audit |
-| Network Security | Partial | ✓ | Config | Audit |
-| Application Security | - | Tools | ✓ | Review |
-| Data Encryption | Engine | Config | Implementation | Standards |
+| Component            | Cloud Provider | Platform Team | Dev Team       | Security Team |
+| -------------------- | -------------- | ------------- | -------------- | ------------- |
+| Physical Security    | ✓              | -             | -              | Audit         |
+| Network Security     | Partial        | ✓             | Config         | Audit         |
+| Application Security | -              | Tools         | ✓              | Review        |
+| Data Encryption      | Engine         | Config        | Implementation | Standards     |
 
 @{/example}
 
@@ -217,6 +220,7 @@ Create data flow diagram showing:
 [[LLM: Design deployment pipeline that balances speed with safety. Include progressive deployment strategies and automated quality gates.
 
 Create pipeline diagram showing:
+
 - Build stages
 - Test gates
 - Deployment stages
@@ -265,18 +269,21 @@ Create pipeline diagram showing:
 [[LLM: Design infrastructure to specifically support other BMAD agents and their workflows. This ensures the infrastructure enables the entire BMAD methodology.]]
 
 ### Development Agent Support
+
 - Container platform for development environments
 - GitOps workflows for application deployment
 - Service mesh integration for development testing
 - Developer self-service platform capabilities
 
 ### Product & Architecture Alignment
+
 - Infrastructure implementing PRD scalability requirements
 - Deployment automation supporting product iteration speed
 - Service reliability meeting product SLAs
 - Architecture patterns properly implemented in infrastructure
 
 ### Cross-Agent Integration Points
+
 - CI/CD pipelines supporting Frontend, Backend, and Full Stack development workflows
 - Monitoring and observability data accessible to QA and DevOps agents
 - Infrastructure enabling Design Architect's UI/UX performance requirements
@@ -333,6 +340,7 @@ The Platform Engineer should use the infrastructure checklist to systematically 
 ### Architecture Decision Records (ADRs)
 
 Create ADRs for key infrastructure decisions:
+
 - Cloud provider selection rationale
 - Container orchestration platform choice
 - Networking architecture decisions
@@ -342,6 +350,7 @@ Create ADRs for key infrastructure decisions:
 ### Implementation Validation Criteria
 
 Define specific criteria for validating correct implementation:
+
 - Infrastructure as Code quality gates
 - Security compliance checkpoints
 - Performance benchmarks
@@ -401,6 +410,6 @@ Define specific criteria for validating correct implementation:
 
 ---
 
-*Document Version: 1.0*
-*Last Updated: {{current_date}}*
-*Next Review: {{review_date}}*
+_Document Version: 1.0_
+_Last Updated: {{current_date}}_
+_Next Review: {{review_date}}_

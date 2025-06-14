@@ -2,59 +2,37 @@ name: infrastructure
 version: 1.0.0
 description: Infrastructure & DevOps expansion pack for BMAD Method
 author: BMAD Team
-
-# Files to install and their destinations
 files:
-  # Agent configuration
   - source: agents/infra-devops-platform.yml
     destination: .bmad-core/agents/infra-devops-platform.yml
-
-  # Persona definition
   - source: personas/infra-devops-platform.md
     destination: .bmad-core/personas/infra-devops-platform.md
-
-  # IDE agent configuration
   - source: ide-agents/infra-devops-platform.ide.md
     destination: .bmad-core/ide-agents/infra-devops-platform.ide.md
-
-  # Templates
   - source: templates/infrastructure-architecture-tmpl.md
     destination: .bmad-core/templates/infrastructure-architecture-tmpl.md
-
   - source: templates/infrastructure-platform-from-arch-tmpl.md
     destination: .bmad-core/templates/infrastructure-platform-from-arch-tmpl.md
-
-  # Tasks
   - source: tasks/validate-infrastructure.md
     destination: .bmad-core/tasks/validate-infrastructure.md
-
   - source: tasks/review-infrastructure.md
     destination: .bmad-core/tasks/review-infrastructure.md
-
-  # Checklists
   - source: checklists/infrastructure-checklist.md
     destination: .bmad-core/checklists/infrastructure-checklist.md
-
-# Team configurations to update (add devops agent)
 team_updates:
   - team: team-technical.yml
     add_agent: infra-devops-platform
-
   - team: team-all.yml
     add_agent: infra-devops-platform
-
-# Dependencies on core BMAD components
 dependencies:
-  - architect # Infrastructure design depends on main architecture
-  - create-doc # Uses template system
-
-# Post-install instructions
+  - architect
+  - create-doc
 post_install_message: |
   Infrastructure expansion pack installed successfully!
 
   The DevOps agent is now available. To use:
-  - For infrastructure architecture: Use architect agent with '*create-infrastructure'
-  - For implementation: Use 'npm run agent devops'
-  - For validation: Use devops agent with '*validate-infra'
+  - "For infrastructure architecture: Use architect agent with '*create-infrastructure"
+  - "For implementation: Use 'npm run agent devops"
+  - "For validation: Use devops agent with '*validate-infra"
 
   Remember to configure your cloud credentials and technical preferences before use.
