@@ -121,7 +121,7 @@ Present to the user:
    1. Review and customize the created tasks/templates
    2. Run npm run build:agents
    3. Test the agent thoroughly
-```
+```text
 
 ## Template Reference
 
