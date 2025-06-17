@@ -38,7 +38,7 @@ These references map directly to bundle sections:
 
 ---
 
-==================== START: agent-teams#team-game-dev ====================
+==================== START: agent-teams#phaser-2d-nodejs-game-team ====================
 bundle:
   name: Phaser 2D NodeJS Game Team
   icon: 🎮
@@ -51,7 +51,7 @@ agents:
 workflows:
   - game-dev-greenfield
   - game-prototype
-==================== END: agent-teams#team-game-dev ====================
+==================== END: agent-teams#phaser-2d-nodejs-game-team ====================
 
 ==================== START: agents#bmad-orchestrator ====================
 # bmad
