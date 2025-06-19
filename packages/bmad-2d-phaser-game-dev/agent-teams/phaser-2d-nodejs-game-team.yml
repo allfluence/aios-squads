@@ -3,6 +3,7 @@ bundle:
   icon: 🎮
   description: Game Development team specialized in 2D games using Phaser 3 and TypeScript.
 agents:
+  - analyst
   - bmad-orchestrator
   - game-designer
   - game-developer
