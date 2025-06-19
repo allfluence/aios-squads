@@ -9,6 +9,7 @@ This task provides a comprehensive toolkit of creative brainstorming techniques 
 [[LLM: Begin by understanding the game design context and goals. Ask clarifying questions if needed to determine the best approach for game-specific ideation.]]
 
 1. **Establish Game Context**
+
    - Understand the game genre or opportunity area
    - Identify target audience and platform constraints
    - Determine session goals (concept exploration vs. mechanic refinement)
@@ -164,26 +165,31 @@ This task provides a comprehensive toolkit of creative brainstorming techniques 
 [[LLM: Help user select appropriate techniques based on their specific game design needs.]]
 
 **For Initial Game Concepts:**
+
 - What If Game Scenarios
 - Cross-Genre Fusion
 - Emotion-First Design
 
 **For Stuck/Blocked Creativity:**
+
 - Player Motivation Reversal
 - Constraint-Based Creativity
 - Genre Expectation Subversion
 
 **For Mechanic Development:**
+
 - SCAMPER for Game Mechanics
 - Core Loop Deconstruction
 - Player Agency Spectrum
 
 **For Player Experience:**
+
 - Player Archetype Brainstorming
 - Emotion-First Design
 - Accessibility-First Innovation
 
 **For World Building:**
+
 - Environmental Storytelling
 - Player-Generated Narrative
 - Platform-Specific Design
@@ -193,16 +199,19 @@ This task provides a comprehensive toolkit of creative brainstorming techniques 
 [[LLM: Guide the brainstorming session with appropriate pacing for game design exploration.]]
 
 1. **Inspiration Phase** (10-15 min)
+
    - Reference existing games and mechanics
    - Explore player experiences and emotions
    - Gather visual and thematic inspiration
 
 2. **Divergent Exploration** (25-35 min)
+
    - Generate many game concepts or mechanics
    - Use expansion and fusion techniques
    - Encourage wild and impossible ideas
 
 3. **Player-Centered Filtering** (15-20 min)
+
    - Consider target audience reactions
    - Evaluate emotional impact and engagement
    - Group ideas by player experience goals
@@ -217,6 +226,7 @@ This task provides a comprehensive toolkit of creative brainstorming techniques 
 [[LLM: Present brainstorming results in a format useful for game development.]]
 
 **Session Summary:**
+
 - Techniques used and focus areas
 - Total concepts/mechanics generated
 - Key themes and patterns identified
@@ -232,21 +242,25 @@ This task provides a comprehensive toolkit of creative brainstorming techniques 
 **Development Readiness:**
 
 **Prototype-Ready Ideas:**
+
 - Ideas that can be tested immediately
 - Minimum viable implementations
 - Quick validation approaches
 
 **Research-Required Ideas:**
+
 - Concepts needing technical investigation
 - Player testing and market research needs
 - Competitive analysis requirements
 
 **Future Innovation Pipeline:**
+
 - Ideas requiring significant development
 - Technology-dependent concepts
 - Market timing considerations
 
 **Next Steps:**
+
 - Which concepts to prototype first
 - Recommended research areas
 - Suggested playtesting approaches
@@ -255,24 +269,28 @@ This task provides a comprehensive toolkit of creative brainstorming techniques 
 ## Game Design Specific Considerations
 
 ### Platform and Audience Awareness
+
 - Always consider target platform limitations and advantages
 - Keep target audience preferences and expectations in mind
 - Balance innovation with familiar game design patterns
 - Consider monetization and business model implications
 
 ### Rapid Prototyping Mindset
+
 - Focus on ideas that can be quickly tested
 - Emphasize core mechanics over complex features
 - Design for iteration and player feedback
 - Consider digital and paper prototyping approaches
 
 ### Player Psychology Integration
+
 - Understand motivation and engagement drivers
 - Consider learning curves and skill development
 - Design for different play session lengths
 - Balance challenge and reward appropriately
 
 ### Technical Feasibility
+
 - Keep development resources and timeline in mind
 - Consider art and audio asset requirements
 - Think about performance and optimization needs

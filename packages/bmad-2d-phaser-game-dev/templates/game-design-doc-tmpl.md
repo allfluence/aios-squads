@@ -53,6 +53,7 @@ If available, review any provided documents or ask if any are optionally availab
 [[LLM: Define the 30-60 second loop that players will repeat. Be specific about timing and player actions.]]
 
 **Primary Loop ({{duration}} seconds):**
+
 1. {{action_1}} ({{time_1}}s)
 2. {{action_2}} ({{time_2}}s)
 3. {{action_3}} ({{time_3}}s)
@@ -63,10 +64,12 @@ If available, review any provided documents or ask if any are optionally availab
 [[LLM: Clearly define success and failure states]]
 
 **Victory Conditions:**
+
 - {{win_condition_1}}
 - {{win_condition_2}}
 
 **Failure States:**
+
 - {{loss_condition_1}}
 - {{loss_condition_2}}
 
@@ -87,6 +90,7 @@ If available, review any provided documents or ask if any are optionally availab
 **System Response:** {{game_response}}
 
 **Implementation Notes:**
+
 - {{tech_requirement_1}}
 - {{tech_requirement_2}}
 - {{performance_consideration}}
@@ -99,8 +103,8 @@ If available, review any provided documents or ask if any are optionally availab
 
 [[LLM: Define all input methods for different platforms]]
 
-| Action | Desktop | Mobile | Gamepad |
-|--------|---------|--------|---------|
+| Action       | Desktop | Mobile      | Gamepad    |
+| ------------ | ------- | ----------- | ---------- |
 | {{action_1}} | {{key}} | {{gesture}} | {{button}} |
 | {{action_2}} | {{key}} | {{gesture}} | {{button}} |
 
@@ -113,6 +117,7 @@ If available, review any provided documents or ask if any are optionally availab
 **Progression Type:** {{linear|branching|metroidvania}}
 
 **Key Milestones:**
+
 1. **{{milestone_1}}** - {{unlock_description}}
 2. **{{milestone_2}}** - {{unlock_description}}
 3. **{{milestone_3}}** - {{unlock_description}}
@@ -132,9 +137,9 @@ If available, review any provided documents or ask if any are optionally availab
 
 [[LLM: Define any in-game currencies, resources, or collectibles]]
 
-| Resource | Earn Rate | Spend Rate | Purpose | Cap |
-|----------|-----------|------------|---------|-----|
-| {{resource_1}} | {{rate}} | {{rate}} | {{use}} | {{max}} |
+| Resource       | Earn Rate | Spend Rate | Purpose | Cap     |
+| -------------- | --------- | ---------- | ------- | ------- |
+| {{resource_1}} | {{rate}}  | {{rate}}   | {{use}} | {{max}} |
 
 ^^/CONDITION: has_economy^^
 
@@ -154,6 +159,7 @@ If available, review any provided documents or ask if any are optionally availab
 **Difficulty:** {{relative_difficulty}}
 
 **Structure Template:**
+
 - Introduction: {{intro_description}}
 - Challenge: {{main_challenge}}
 - Resolution: {{completion_requirement}}
@@ -180,11 +186,13 @@ If available, review any provided documents or ask if any are optionally availab
 ### Platform Specific
 
 **Desktop:**
+
 - Resolution: {{min_resolution}} - {{max_resolution}}
 - Input: Keyboard, Mouse, Gamepad
 - Browser: Chrome 80+, Firefox 75+, Safari 13+
 
 **Mobile:**
+
 - Resolution: {{mobile_min}} - {{mobile_max}}
 - Input: Touch, Tilt (optional)
 - OS: iOS 13+, Android 8+
@@ -194,12 +202,14 @@ If available, review any provided documents or ask if any are optionally availab
 [[LLM: Define asset specifications for the art and audio teams]]
 
 **Visual Assets:**
+
 - Art Style: {{style_description}}
 - Color Palette: {{color_specification}}
 - Animation: {{animation_requirements}}
 - UI Resolution: {{ui_specs}}
 
 **Audio Assets:**
+
 - Music Style: {{music_genre}}
 - Sound Effects: {{sfx_requirements}}
 - Voice Acting: {{voice_needs}}
@@ -211,6 +221,7 @@ If available, review any provided documents or ask if any are optionally availab
 ### Engine Configuration
 
 **Phaser 3 Setup:**
+
 - TypeScript: Strict mode enabled
 - Physics: {{physics_system}} (Arcade/Matter)
 - Renderer: WebGL with Canvas fallback
@@ -219,6 +230,7 @@ If available, review any provided documents or ask if any are optionally availab
 ### Code Architecture
 
 **Required Systems:**
+
 - Scene Management
 - State Management
 - Asset Loading
@@ -230,6 +242,7 @@ If available, review any provided documents or ask if any are optionally availab
 ### Data Management
 
 **Save Data:**
+
 - Progress tracking
 - Settings persistence
 - Statistics collection
@@ -242,12 +255,14 @@ If available, review any provided documents or ask if any are optionally availab
 ### Phase 1: Core Systems ({{duration}})
 
 **Epic: Foundation**
+
 - Engine setup and configuration
 - Basic scene management
 - Core input handling
 - Asset loading pipeline
 
 **Epic: Core Mechanics**
+
 - {{primary_mechanic}} implementation
 - Basic physics and collision
 - Player controller
@@ -255,11 +270,13 @@ If available, review any provided documents or ask if any are optionally availab
 ### Phase 2: Gameplay Features ({{duration}})
 
 **Epic: Game Systems**
+
 - {{mechanic_2}} implementation
 - {{mechanic_3}} implementation
 - Game state management
 
 **Epic: Content Creation**
+
 - Level loading system
 - First playable levels
 - Basic UI implementation
@@ -267,11 +284,13 @@ If available, review any provided documents or ask if any are optionally availab
 ### Phase 3: Polish & Optimization ({{duration}})
 
 **Epic: Performance**
+
 - Optimization and profiling
 - Mobile platform testing
 - Memory management
 
 **Epic: User Experience**
+
 - Audio implementation
 - Visual effects and polish
 - Final UI/UX refinement
@@ -281,12 +300,14 @@ If available, review any provided documents or ask if any are optionally availab
 [[LLM: Define measurable goals for the game]]
 
 **Technical Metrics:**
+
 - Frame rate: {{fps_target}}
 - Load time: {{load_target}}
 - Crash rate: <{{crash_threshold}}%
 - Memory usage: <{{memory_target}}MB
 
 **Gameplay Metrics:**
+
 - Tutorial completion: {{completion_rate}}%
 - Average session: {{session_length}} minutes
 - Level completion: {{level_completion}}%

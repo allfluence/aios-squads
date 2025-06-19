@@ -60,11 +60,13 @@ This brief is typically created early in the ideation process, often after brain
 [[LLM: List the 3-5 most important gameplay mechanics that define the player experience]]
 
 **Core Mechanic 1: {{mechanic_name}}**
+
 - **Description:** {{how_it_works}}
 - **Player Value:** {{why_its_fun}}
 - **Implementation Scope:** {{complexity_estimate}}
 
 **Core Mechanic 2: {{mechanic_name}}**
+
 - **Description:** {{how_it_works}}
 - **Player Value:** {{why_its_fun}}
 - **Implementation Scope:** {{complexity_estimate}}
@@ -91,10 +93,12 @@ This brief is typically created early in the ideation process, often after brain
 ### Technical Constraints
 
 **Platform Requirements:**
+
 - Primary: {{platform_1}} - {{requirements}}
 - Secondary: {{platform_2}} - {{requirements}}
 
 **Technical Specifications:**
+
 - Engine: Phaser 3 + TypeScript
 - Performance Target: {{fps_target}} FPS on {{target_device}}
 - Memory Budget: <{{memory_limit}}MB
@@ -125,6 +129,7 @@ This brief is typically created early in the ideation process, often after brain
 ### Inspiration Games
 
 **Primary References:**
+
 1. **{{reference_game_1}}** - {{what_we_learn_from_it}}
 2. **{{reference_game_2}}** - {{what_we_learn_from_it}}
 3. **{{reference_game_3}}** - {{what_we_learn_from_it}}
@@ -132,6 +137,7 @@ This brief is typically created early in the ideation process, often after brain
 ### Competitive Analysis
 
 **Direct Competitors:**
+
 - {{competitor_1}}: {{strengths_and_weaknesses}}
 - {{competitor_2}}: {{strengths_and_weaknesses}}
 
@@ -157,13 +163,16 @@ This brief is typically created early in the ideation process, often after brain
 ### Content Categories
 
 **Core Content:**
+
 - {{content_type_1}}: {{quantity_and_description}}
 - {{content_type_2}}: {{quantity_and_description}}
 
 **Optional Content:**
+
 - {{optional_content_type}}: {{quantity_and_description}}
 
 **Replay Elements:**
+
 - {{replayability_features}}
 
 ### Difficulty and Accessibility
@@ -201,23 +210,23 @@ This brief is typically created early in the ideation process, often after brain
 
 ### Technical Risks
 
-| Risk | Probability | Impact | Mitigation Strategy |
-|------|-------------|--------|-------------------|
-| {{technical_risk_1}} | {{high|med|low}} | {{high|med|low}} | {{mitigation_approach}} |
-| {{technical_risk_2}} | {{high|med|low}} | {{high|med|low}} | {{mitigation_approach}} |
+| Risk                 | Probability | Impact | Mitigation Strategy |
+| -------------------- | ----------- | ------ | ------------------- | ------ | --- | ----- | ----------------------- |
+| {{technical_risk_1}} | {{high      | med    | low}}               | {{high | med | low}} | {{mitigation_approach}} |
+| {{technical_risk_2}} | {{high      | med    | low}}               | {{high | med | low}} | {{mitigation_approach}} |
 
 ### Design Risks
 
-| Risk | Probability | Impact | Mitigation Strategy |
-|------|-------------|--------|-------------------|
-| {{design_risk_1}} | {{high|med|low}} | {{high|med|low}} | {{mitigation_approach}} |
-| {{design_risk_2}} | {{high|med|low}} | {{high|med|low}} | {{mitigation_approach}} |
+| Risk              | Probability | Impact | Mitigation Strategy |
+| ----------------- | ----------- | ------ | ------------------- | ------ | --- | ----- | ----------------------- |
+| {{design_risk_1}} | {{high      | med    | low}}               | {{high | med | low}} | {{mitigation_approach}} |
+| {{design_risk_2}} | {{high      | med    | low}}               | {{high | med | low}} | {{mitigation_approach}} |
 
 ### Market Risks
 
-| Risk | Probability | Impact | Mitigation Strategy |
-|------|-------------|--------|-------------------|
-| {{market_risk_1}} | {{high|med|low}} | {{high|med|low}} | {{mitigation_approach}} |
+| Risk              | Probability | Impact | Mitigation Strategy |
+| ----------------- | ----------- | ------ | ------------------- | ------ | --- | ----- | ----------------------- |
+| {{market_risk_1}} | {{high      | med    | low}}               | {{high | med | low}} | {{mitigation_approach}} |
 
 ## Success Criteria
 
@@ -226,11 +235,13 @@ This brief is typically created early in the ideation process, often after brain
 ### Player Experience Metrics
 
 **Engagement Goals:**
+
 - Tutorial completion rate: >{{percentage}}%
 - Average session length: {{duration}} minutes
 - Player retention: D1 {{d1}}%, D7 {{d7}}%, D30 {{d30}}%
 
 **Quality Benchmarks:**
+
 - Player satisfaction: >{{rating}}/10
 - Completion rate: >{{percentage}}%
 - Technical performance: {{fps_target}} FPS consistent
@@ -238,11 +249,13 @@ This brief is typically created early in the ideation process, often after brain
 ### Development Metrics
 
 **Technical Targets:**
+
 - Zero critical bugs at launch
 - Performance targets met on all platforms
 - Load times under {{seconds}}s
 
 **Process Goals:**
+
 - Development timeline adherence
 - Feature scope completion
 - Quality assurance standards
@@ -252,6 +265,7 @@ This brief is typically created early in the ideation process, often after brain
 ### Business Metrics
 
 **Commercial Goals:**
+
 - {{revenue_target}} in first {{time_period}}
 - {{user_acquisition_target}} players in first {{time_period}}
 - {{retention_target}} monthly active users
@@ -271,16 +285,19 @@ This brief is typically created early in the ideation process, often after brain
 ### Development Roadmap
 
 **Phase 1: Pre-Production** ({{duration}})
+
 - Detailed Game Design Document creation
 - Technical architecture planning
 - Art style exploration and pipeline setup
 
 **Phase 2: Prototype** ({{duration}})
+
 - Core mechanic implementation
 - Technical proof of concept
 - Initial playtesting and iteration
 
 **Phase 3: Production** ({{duration}})
+
 - Full feature development
 - Content creation and integration
 - Comprehensive testing and optimization
@@ -288,6 +305,7 @@ This brief is typically created early in the ideation process, often after brain
 ### Documentation Pipeline
 
 **Required Documents:**
+
 1. Game Design Document (GDD) - {{target_completion}}
 2. Technical Architecture Document - {{target_completion}}
 3. Art Style Guide - {{target_completion}}
@@ -296,10 +314,12 @@ This brief is typically created early in the ideation process, often after brain
 ### Validation Plan
 
 **Concept Testing:**
+
 - {{validation_method_1}} - {{timeline}}
 - {{validation_method_2}} - {{timeline}}
 
 **Prototype Testing:**
+
 - {{testing_approach}} - {{timeline}}
 - {{feedback_collection_method}} - {{timeline}}
 

@@ -673,7 +673,7 @@ Before declaring complete:
 
 **README Structure with Character Introduction:**
 
-````markdown
+```markdown
 # {Pack Name} Expansion Pack
 
 ## Meet Your {Domain} Team
@@ -698,9 +698,7 @@ _{Professional background and expertise}_
 
 2. **Launch Orchestrator**:
 
-   ```bash
    npm run agent {pack-name}-orchestrator
-   ```
 
 3. **Follow Numbered Options**: {Character Name} will present numbered choices for each decision
 
@@ -730,7 +728,7 @@ _{Professional background and expertise}_
 ### Knowledge Base
 
 [Embedded domain expertise]
-````
+```
 
 #### 6.3 Advanced Data File Documentation with Validation
 

@@ -103,6 +103,7 @@ This elicitation task is specifically designed for game development and should b
 - **Platform Considerations**: When adapting designs for different devices and input methods
 
 The questions and perspectives offered should always consider:
+
 - Player psychology and motivation
 - Technical feasibility with Phaser 3 and TypeScript
 - Performance implications for 60 FPS targets

@@ -9,6 +9,7 @@ This document establishes coding standards, architectural patterns, and developm
 ### Strict Mode Configuration
 
 **Required tsconfig.json settings:**
+
 ```json
 {
   "compilerOptions": {
@@ -27,6 +28,7 @@ This document establishes coding standards, architectural patterns, and developm
 ### Type Definitions
 
 **Game Object Interfaces:**
+
 ```typescript
 // Core game entity interface
 interface GameEntity {
@@ -53,6 +55,7 @@ interface GameSystem {
 ```
 
 **Scene Data Interfaces:**
+
 ```typescript
 // Scene transition data
 interface SceneData {
@@ -70,7 +73,7 @@ interface GameState {
 interface GameSettings {
   musicVolume: number;
   sfxVolume: number;
-  difficulty: 'easy' | 'normal' | 'hard';
+  difficulty: "easy" | "normal" | "hard";
   controls: ControlScheme;
 }
 ```
@@ -78,20 +81,24 @@ interface GameSettings {
 ### Naming Conventions
 
 **Classes and Interfaces:**
+
 - PascalCase for classes: `PlayerSprite`, `GameManager`, `AudioSystem`
 - PascalCase with 'I' prefix for interfaces: `IGameEntity`, `IPlayerController`
 - Descriptive names that indicate purpose: `CollisionManager` not `CM`
 
 **Methods and Variables:**
+
 - camelCase for methods and variables: `updatePosition()`, `playerSpeed`
 - Descriptive names: `calculateDamage()` not `calcDmg()`
 - Boolean variables with is/has/can prefix: `isActive`, `hasCollision`, `canMove`
 
 **Constants:**
+
 - UPPER_SNAKE_CASE for constants: `MAX_PLAYER_SPEED`, `DEFAULT_VOLUME`
 - Group related constants in enums or const objects
 
 **Files and Directories:**
+
 - kebab-case for file names: `player-controller.ts`, `audio-manager.ts`
 - PascalCase for scene files: `MenuScene.ts`, `GameScene.ts`
 
@@ -100,88 +107,91 @@ interface GameSettings {
 ### Scene Organization
 
 **Scene Lifecycle Management:**
+
 ```typescript
 class GameScene extends Phaser.Scene {
   private gameManager!: GameManager;
   private inputManager!: InputManager;
-  
+
   constructor() {
-    super({ key: 'GameScene' });
+    super({ key: "GameScene" });
   }
-  
+
   preload(): void {
     // Load only scene-specific assets
-    this.load.image('player', 'assets/player.png');
+    this.load.image("player", "assets/player.png");
   }
-  
+
   create(data: SceneData): void {
     // Initialize game systems
     this.gameManager = new GameManager(this);
     this.inputManager = new InputManager(this);
-    
+
     // Set up scene-specific logic
     this.setupGameObjects();
     this.setupEventListeners();
   }
-  
+
   update(time: number, delta: number): void {
     // Update all game systems
     this.gameManager.update(delta);
     this.inputManager.update(delta);
   }
-  
+
   shutdown(): void {
     // Clean up resources
     this.gameManager.destroy();
     this.inputManager.destroy();
-    
+
     // Remove event listeners
-    this.events.off('*');
+    this.events.off("*");
   }
 }
 ```
 
 **Scene Transitions:**
+
 ```typescript
 // Proper scene transitions with data
-this.scene.start('NextScene', {
+this.scene.start("NextScene", {
   playerScore: this.playerScore,
-  currentLevel: this.currentLevel + 1
+  currentLevel: this.currentLevel + 1,
 });
 
 // Scene overlays for UI
-this.scene.launch('PauseMenuScene');
+this.scene.launch("PauseMenuScene");
 this.scene.pause();
 ```
 
 ### Game Object Patterns
 
 **Component-Based Architecture:**
+
 ```typescript
 // Base game entity
 abstract class GameEntity extends Phaser.GameObjects.Sprite {
   protected components: Map<string, GameComponent> = new Map();
-  
+
   constructor(scene: Phaser.Scene, x: number, y: number, texture: string) {
     super(scene, x, y, texture);
     scene.add.existing(this);
   }
-  
+
   addComponent<T extends GameComponent>(component: T): T {
     this.components.set(component.name, component);
     return component;
   }
-  
+
   getComponent<T extends GameComponent>(name: string): T | undefined {
     return this.components.get(name) as T;
   }
-  
+
   update(delta: number): void {
-    this.components.forEach(component => component.update(delta));
+    this.components.forEach((component) => component.update(delta));
   }
-  
+
   destroy(): void {
-    this.components.forEach(component => component.destroy());
+    this.components.forEach((component) => component.destroy());
     this.components.clear();
     super.destroy();
   }
@@ -191,10 +201,10 @@ abstract class GameEntity extends Phaser.GameObjects.Sprite {
 class Player extends GameEntity {
   private movement!: MovementComponent;
   private health!: HealthComponent;
-  
+
   constructor(scene: Phaser.Scene, x: number, y: number) {
-    super(scene, x, y, 'player');
-    
+    super(scene, x, y, "player");
+
     this.movement = this.addComponent(new MovementComponent(this));
     this.health = this.addComponent(new HealthComponent(this, 100));
   }
@@ -204,33 +214,34 @@ class Player extends GameEntity {
 ### System Management
 
 **Singleton Managers:**
+
 ```typescript
 class GameManager {
   private static instance: GameManager;
   private scene: Phaser.Scene;
   private gameState: GameState;
-  
+
   constructor(scene: Phaser.Scene) {
     if (GameManager.instance) {
-      throw new Error('GameManager already exists!');
+      throw new Error("GameManager already exists!");
     }
-    
+
     this.scene = scene;
     this.gameState = this.loadGameState();
     GameManager.instance = this;
   }
-  
+
   static getInstance(): GameManager {
     if (!GameManager.instance) {
-      throw new Error('GameManager not initialized!');
+      throw new Error("GameManager not initialized!");
     }
     return GameManager.instance;
   }
-  
+
   update(delta: number): void {
     // Update game logic
   }
-  
+
   destroy(): void {
     GameManager.instance = null!;
   }
@@ -242,14 +253,15 @@ class GameManager {
 ### Object Pooling
 
 **Required for High-Frequency Objects:**
+
 ```typescript
 class BulletPool {
   private pool: Bullet[] = [];
   private scene: Phaser.Scene;
-  
+
   constructor(scene: Phaser.Scene, initialSize: number = 50) {
     this.scene = scene;
-    
+
     // Pre-create bullets
     for (let i = 0; i < initialSize; i++) {
       const bullet = new Bullet(scene, 0, 0);
@@ -258,20 +270,20 @@ class BulletPool {
       this.pool.push(bullet);
     }
   }
-  
+
   getBullet(): Bullet | null {
-    const bullet = this.pool.find(b => !b.active);
+    const bullet = this.pool.find((b) => !b.active);
     if (bullet) {
       bullet.setActive(true);
       bullet.setVisible(true);
       return bullet;
     }
-    
+
     // Pool exhausted - create new bullet
-    console.warn('Bullet pool exhausted, creating new bullet');
+    console.warn("Bullet pool exhausted, creating new bullet");
     return new Bullet(this.scene, 0, 0);
   }
-  
+
   releaseBullet(bullet: Bullet): void {
     bullet.setActive(false);
     bullet.setVisible(false);
@@ -283,27 +295,28 @@ class BulletPool {
 ### Frame Rate Optimization
 
 **Performance Monitoring:**
+
 ```typescript
 class PerformanceMonitor {
   private frameCount: number = 0;
   private lastTime: number = 0;
   private frameRate: number = 60;
-  
+
   update(time: number): void {
     this.frameCount++;
-    
+
     if (time - this.lastTime >= 1000) {
       this.frameRate = this.frameCount;
       this.frameCount = 0;
       this.lastTime = time;
-      
+
       if (this.frameRate < 55) {
         console.warn(`Low frame rate detected: ${this.frameRate} FPS`);
         this.optimizePerformance();
       }
     }
   }
-  
+
   private optimizePerformance(): void {
     // Reduce particle counts, disable effects, etc.
   }
@@ -311,17 +324,18 @@ class PerformanceMonitor {
 ```
 
 **Update Loop Optimization:**
+
 ```typescript
 // Avoid expensive operations in update loops
 class GameScene extends Phaser.Scene {
   private updateTimer: number = 0;
   private readonly UPDATE_INTERVAL = 100; // ms
-  
+
   update(time: number, delta: number): void {
     // High-frequency updates (every frame)
     this.updatePlayer(delta);
     this.updatePhysics(delta);
-    
+
     // Low-frequency updates (10 times per second)
     this.updateTimer += delta;
     if (this.updateTimer >= this.UPDATE_INTERVAL) {
@@ -338,6 +352,7 @@ class GameScene extends Phaser.Scene {
 ### Cross-Platform Input
 
 **Input Abstraction:**
+
 ```typescript
 interface InputState {
   moveLeft: boolean;
@@ -353,26 +368,26 @@ class InputManager {
     moveRight: false,
     jump: false,
     action: false,
-    pause: false
+    pause: false,
   };
-  
+
   private keys!: { [key: string]: Phaser.Input.Keyboard.Key };
   private pointer!: Phaser.Input.Pointer;
-  
+
   constructor(private scene: Phaser.Scene) {
     this.setupKeyboard();
     this.setupTouch();
   }
-  
+
   private setupKeyboard(): void {
-    this.keys = this.scene.input.keyboard.addKeys('W,A,S,D,SPACE,ESC,UP,DOWN,LEFT,RIGHT');
+    this.keys = this.scene.input.keyboard.addKeys("W,A,S,D,SPACE,ESC,UP,DOWN,LEFT,RIGHT");
   }
-  
+
   private setupTouch(): void {
-    this.scene.input.on('pointerdown', this.handlePointerDown, this);
-    this.scene.input.on('pointerup', this.handlePointerUp, this);
+    this.scene.input.on("pointerdown", this.handlePointerDown, this);
+    this.scene.input.on("pointerup", this.handlePointerUp, this);
   }
-  
+
   update(): void {
     // Update input state from multiple sources
     this.inputState.moveLeft = this.keys.A.isDown || this.keys.LEFT.isDown;
@@ -380,7 +395,7 @@ class InputManager {
     this.inputState.jump = Phaser.Input.Keyboard.JustDown(this.keys.SPACE);
     // ... handle touch input
   }
-  
+
   getInputState(): InputState {
     return { ...this.inputState };
   }
@@ -392,30 +407,31 @@ class InputManager {
 ### Graceful Degradation
 
 **Asset Loading Error Handling:**
+
 ```typescript
 class AssetManager {
   loadAssets(): Promise<void> {
     return new Promise((resolve, reject) => {
-      this.scene.load.on('filecomplete', this.handleFileComplete, this);
-      this.scene.load.on('loaderror', this.handleLoadError, this);
-      this.scene.load.on('complete', () => resolve());
-      
+      this.scene.load.on("filecomplete", this.handleFileComplete, this);
+      this.scene.load.on("loaderror", this.handleLoadError, this);
+      this.scene.load.on("complete", () => resolve());
+
       this.scene.load.start();
     });
   }
-  
+
   private handleLoadError(file: Phaser.Loader.File): void {
     console.error(`Failed to load asset: ${file.key}`);
-    
+
     // Use fallback assets
     this.loadFallbackAsset(file.key);
   }
-  
+
   private loadFallbackAsset(key: string): void {
     // Load placeholder or default assets
     switch (key) {
-      case 'player':
-        this.scene.load.image('player', 'assets/defaults/default-player.png');
+      case "player":
+        this.scene.load.image("player", "assets/defaults/default-player.png");
         break;
       default:
         console.warn(`No fallback for asset: ${key}`);
@@ -427,25 +443,26 @@ class AssetManager {
 ### Runtime Error Recovery
 
 **System Error Handling:**
+
 ```typescript
 class GameSystem {
   protected handleError(error: Error, context: string): void {
     console.error(`Error in ${context}:`, error);
-    
+
     // Report to analytics/logging service
     this.reportError(error, context);
-    
+
     // Attempt recovery
     this.attemptRecovery(context);
   }
-  
+
   private attemptRecovery(context: string): void {
     switch (context) {
-      case 'update':
+      case "update":
         // Reset system state
         this.reset();
         break;
-      case 'render':
+      case "render":
         // Disable visual effects
         this.disableEffects();
         break;
@@ -462,28 +479,29 @@ class GameSystem {
 ### Unit Testing
 
 **Game Logic Testing:**
+
 ```typescript
 // Example test for game mechanics
-describe('HealthComponent', () => {
+describe("HealthComponent", () => {
   let healthComponent: HealthComponent;
-  
+
   beforeEach(() => {
     const mockEntity = {} as GameEntity;
     healthComponent = new HealthComponent(mockEntity, 100);
   });
-  
-  test('should initialize with correct health', () => {
+
+  test("should initialize with correct health", () => {
     expect(healthComponent.currentHealth).toBe(100);
     expect(healthComponent.maxHealth).toBe(100);
   });
-  
-  test('should handle damage correctly', () => {
+
+  test("should handle damage correctly", () => {
     healthComponent.takeDamage(25);
     expect(healthComponent.currentHealth).toBe(75);
     expect(healthComponent.isAlive()).toBe(true);
   });
-  
-  test('should handle death correctly', () => {
+
+  test("should handle death correctly", () => {
     healthComponent.takeDamage(150);
     expect(healthComponent.currentHealth).toBe(0);
     expect(healthComponent.isAlive()).toBe(false);
@@ -494,20 +512,21 @@ describe('HealthComponent', () => {
 ### Integration Testing
 
 **Scene Testing:**
+
 ```typescript
-describe('GameScene Integration', () => {
+describe("GameScene Integration", () => {
   let scene: GameScene;
   let mockGame: Phaser.Game;
-  
+
   beforeEach(() => {
     // Mock Phaser game instance
     mockGame = createMockGame();
     scene = new GameScene();
   });
-  
-  test('should initialize all systems', () => {
+
+  test("should initialize all systems", () => {
     scene.create({});
-    
+
     expect(scene.gameManager).toBeDefined();
     expect(scene.inputManager).toBeDefined();
   });
@@ -566,21 +585,25 @@ src/
 ### Story Implementation Process
 
 1. **Read Story Requirements:**
+
    - Understand acceptance criteria
    - Identify technical requirements
    - Review performance constraints
 
 2. **Plan Implementation:**
+
    - Identify files to create/modify
    - Consider component architecture
    - Plan testing approach
 
 3. **Implement Feature:**
+
    - Follow TypeScript strict mode
    - Use established patterns
    - Maintain 60 FPS performance
 
 4. **Test Implementation:**
+
    - Write unit tests for game logic
    - Test cross-platform functionality
    - Validate performance targets
@@ -593,6 +616,7 @@ src/
 ### Code Review Checklist
 
 **Before Committing:**
+
 - [ ] TypeScript compiles without errors
 - [ ] All tests pass
 - [ ] Performance targets met (60 FPS)
@@ -606,17 +630,20 @@ src/
 ## Performance Targets
 
 ### Frame Rate Requirements
+
 - **Desktop**: Maintain 60 FPS at 1080p
 - **Mobile**: Maintain 60 FPS on mid-range devices, minimum 30 FPS on low-end
 - **Optimization**: Implement dynamic quality scaling when performance drops
 
 ### Memory Management
+
 - **Total Memory**: Under 100MB for full game
 - **Per Scene**: Under 50MB per gameplay scene
 - **Asset Loading**: Progressive loading to stay under limits
 - **Garbage Collection**: Minimize object creation in update loops
 
 ### Loading Performance
+
 - **Initial Load**: Under 5 seconds for game start
 - **Scene Transitions**: Under 2 seconds between scenes
 - **Asset Streaming**: Background loading for upcoming content

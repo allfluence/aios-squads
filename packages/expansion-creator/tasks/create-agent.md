@@ -183,12 +183,12 @@ When a required task or template doesn't exist:
 ```yaml
 dependencies:
   tasks:
-    - 'create-doc # Required if agent creates any documents'
-    - 'analyze-requirements # Custom task for this agent'
-    - 'generate-report # Another custom task'
+    - create-doc
+    - analyze-requirements
+    - generate-report
   templates:
-    - 'requirements-doc # Template for requirements documents'
-    - 'analysis-report # Template for analysis reports'
+    - requirements-doc
+    - analysis-report
 ```
 
 ## Notes

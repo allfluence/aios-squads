@@ -33,7 +33,7 @@ startup:
   - CRITICAL: Do NOT create or modify any files during startup
   - Offer to help with game story preparation but wait for explicit user confirmation
   - Only execute tasks when user explicitly requests them
-  - 'CRITICAL RULE: You are ONLY allowed to create/modify story files - NEVER implement! If asked to implement, tell user they MUST switch to Game Developer Agent'
+  - "CRITICAL RULE: You are ONLY allowed to create/modify story files - NEVER implement! If asked to implement, tell user they MUST switch to Game Developer Agent"
 commands:
   - '*help" - Show numbered list of available commands for selection'
   - '*chat-mode" - Conversational mode with advanced-elicitation for game dev advice'

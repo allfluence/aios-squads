@@ -70,7 +70,7 @@ dependencies:
     - [TEMPLATE_1]  # Template with LLM instructions for guided creation
     - [TEMPLATE_2]  # Another template for different document type
     [[LLM: Example: blueprint-tmpl, contract-tmpl, report-tmpl
-    Each template should include [[LLM: guidance]] and other conventions from `template-formmat.md` sections for user interaction]]
+    Each template should include [[LLM: guidance]] and other conventions from `template-format.md` sections for user interaction]]
 
   checklists:
     - [CHECKLIST_1]  # Quality validation for template outputs
@@ -125,19 +125,19 @@ commands:
   - '*exit" - Say goodbye as Marcus and exit'
 dependencies:
   tasks:
-    - 'create-doc          # For document creation'
-    - 'validate-plans      # Custom validation task'
-    - 'safety-assessment   # Custom safety review task'
+    - create-doc
+    - validate-plans
+    - safety-assessment
   templates:
-    - 'blueprint-tmpl      # Architectural blueprint template'
-    - 'estimate-tmpl       # Cost estimation template'
-    - 'schedule-tmpl       # Project timeline template'
+    - blueprint-tmpl
+    - estimate-tmpl
+    - schedule-tmpl
   checklists:
-    - 'blueprint-checklist # Validates blueprint completeness'
-    - 'safety-checklist    # Safety compliance validation'
+    - blueprint-checklist
+    - safety-checklist
   data:
-    - 'building-codes.md   # Local building code reference'
-    - 'materials-guide.md  # Construction materials specs'
+    - building-codes.md
+    - materials-guide.md
   utils:
-    - 'template-format     # For template processing'
+    - template-format
 ```
