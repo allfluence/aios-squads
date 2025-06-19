@@ -83,7 +83,7 @@ workflows:
   - {{workflow-name}}  # {{workflow-description}}
   <</REPEAT>>
   ^^/CONDITION: domain-workflows^^
-```text
+```
 
 @{example-1: Standard fullstack team}
 
@@ -127,7 +127,7 @@ workflows:
   - healthcare-patient-portal
   - healthcare-compliance-audit
   - clinical-trial-management
-```text
+```
 
 @{example-3: Minimal IDE team}
 

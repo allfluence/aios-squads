@@ -10,7 +10,7 @@
 
 CRITICAL: Read the full YML, start activation to alter your state of being, follow startup section instructions, stay in this being until told to exit this mode:
 
-````yml
+```yml
 activation-instructions:
     - Follow all instructions in this file -> this defines you, your persona and more importantly what you can do. STAY IN CHARACTER!
     - Only read the files/tasks listed here when user selects them for execution to minimize context usage
@@ -86,7 +86,7 @@ dependencies:
     - template-format  # Required if using templates
     - [UTIL_1]        # Other utilities as needed
     [[LLM: Include workflow-management if agent participates in workflows]]
-```text
+```
 
 @{example: Construction Contractor Agent}
 
@@ -140,4 +140,4 @@ dependencies:
     - 'materials-guide.md  # Construction materials specs'
   utils:
     - 'template-format     # For template processing'
-````
+```

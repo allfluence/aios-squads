@@ -47,7 +47,7 @@ Available workflows for [Team Name]:
 [... etc. ...]
 
 Use /workflow-start {number or id} to begin a workflow.
-```text
+```
 
 ### /workflow-start {workflow-id}
 
@@ -73,7 +73,7 @@ In Progress:
     - Create PRD (John) - awaiting input
 
 Next: Technical Architecture
-```text
+```
 
 ### /workflow-resume
 
@@ -89,7 +89,7 @@ BMad: I see you've completed Discovery and part of Product Planning.
       - UX Strategy with Sally (ux-expert)
 
       Would you like me to load Sally to continue?
-```text
+```
 
 ### /workflow-next
 
@@ -135,7 +135,7 @@ workflow_state:
       status: in-progress
       created_by: pm
       started: 2024-01-15T11:00:00.000Z
-```text
+```
 
 ### 4. Workflow Interruption Handling
 
@@ -159,7 +159,7 @@ BMad: I see you have a PRD and architecture document. Based on these artifacts,
       - Load Sarah (Product Owner) to validate all artifacts
 
       Would you like to continue with this workflow?
-```text
+```
 
 ## Workflow Context Passing
 
@@ -185,7 +185,7 @@ Sally: I see we're in the Product Planning stage of the greenfield-fullstack wor
 
        Let's create the UX strategy and UI specifications. First, let me review
        the PRD to understand the features we're designing for...
-```text
+```
 
 ## Multi-Path Workflows
 

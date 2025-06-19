@@ -116,7 +116,7 @@ Difficulty
     |/     /
     +-----------> Level Number
    Tutorial  Early  Mid  Late
-```text
+```
 
 **Scaling Parameters:**
 - Enemy count: {{start_count}} → {{end_count}}

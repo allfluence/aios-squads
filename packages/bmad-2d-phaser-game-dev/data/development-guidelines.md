@@ -22,7 +22,7 @@ This document establishes coding standards, architectural patterns, and developm
     "exactOptionalPropertyTypes": true
   }
 }
-```text
+```
 
 ### Type Definitions
 
@@ -50,7 +50,7 @@ interface GameSystem {
   update(delta: number): void;
   shutdown(): void;
 }
-```text
+```
 
 **Scene Data Interfaces:**
 ```typescript
@@ -73,7 +73,7 @@ interface GameSettings {
   difficulty: 'easy' | 'normal' | 'hard';
   controls: ControlScheme;
 }
-```text
+```
 
 ### Naming Conventions
 
@@ -152,7 +152,7 @@ this.scene.start('NextScene', {
 // Scene overlays for UI
 this.scene.launch('PauseMenuScene');
 this.scene.pause();
-```text
+```
 
 ### Game Object Patterns
 
@@ -199,7 +199,7 @@ class Player extends GameEntity {
     this.health = this.addComponent(new HealthComponent(this, 100));
   }
 }
-```text
+```
 
 ### System Management
 
@@ -235,7 +235,7 @@ class GameManager {
     GameManager.instance = null!;
   }
 }
-```text
+```
 
 ## Performance Optimization
 
@@ -308,7 +308,7 @@ class PerformanceMonitor {
     // Reduce particle counts, disable effects, etc.
   }
 }
-```text
+```
 
 **Update Loop Optimization:**
 ```typescript
@@ -331,7 +331,7 @@ class GameScene extends Phaser.Scene {
     }
   }
 }
-```text
+```
 
 ## Input Handling
 
@@ -385,7 +385,7 @@ class InputManager {
     return { ...this.inputState };
   }
 }
-```text
+```
 
 ## Error Handling
 
@@ -455,7 +455,7 @@ class GameSystem {
     }
   }
 }
-```text
+```
 
 ## Testing Standards
 
@@ -489,7 +489,7 @@ describe('HealthComponent', () => {
     expect(healthComponent.isAlive()).toBe(false);
   });
 });
-```text
+```
 
 ### Integration Testing
 
@@ -512,7 +512,7 @@ describe('GameScene Integration', () => {
     expect(scene.inputManager).toBeDefined();
   });
 });
-```text
+```
 
 ## File Organization
 

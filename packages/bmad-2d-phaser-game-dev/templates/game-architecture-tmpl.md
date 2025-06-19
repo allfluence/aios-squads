@@ -80,7 +80,7 @@ This architecture is designed to support the gameplay mechanics defined in the G
 │   ├── stories/         # Development stories
 │   └── architecture/    # Technical docs
 └── dist/                # Built game files
-```text
+```
 
 ### Module Organization
 
@@ -365,7 +365,7 @@ const gameConfig: Phaser.Types.Core.GameConfig = {
     },
     // Additional configuration...
 };
-```text
+```
 
 ### Game Balance Configuration
 

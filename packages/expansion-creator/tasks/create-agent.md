@@ -63,7 +63,7 @@ Created during agent setup:
 - Templates:
   - [ ] template-name-1.md
   - [ ] template-name-2.md
-```text
+```
 
 ### 4. Create Agent File
 
@@ -121,7 +121,7 @@ Present to the user:
    1. Review and customize the created tasks/templates
    2. Run npm run build:agents
    3. Test the agent thoroughly
-```text
+```
 
 ## Template Reference
 
@@ -150,7 +150,7 @@ persona:
     - Data integrity and accuracy above all
     - Clear communication of complex findings
     - Actionable insights over raw numbers
-```text
+```
 
 ## Creating Missing Dependencies
 
