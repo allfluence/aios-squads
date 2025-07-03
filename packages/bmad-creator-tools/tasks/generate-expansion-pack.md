@@ -286,7 +286,7 @@ IMPORTANT: Only proceed after plan.md is approved
 expansion-packs/
 └── {pack-name}/
 ├── plan.md (ALREADY CREATED)
-├── manifest.yml
+├── manifest.yaml
 ├── README.md
 ├── agents/
 │ ├── {pack-name}-orchestrator.md (REQUIRED - Custom themed orchestrator)
@@ -309,13 +309,13 @@ expansion-packs/
 ├── workflows/
 │ └── {domain}-workflow.md (REQUIRED if multiple agents)
 └── agent-teams/
-└── {domain}-team.yml (REQUIRED if multiple agents)
+└── {domain}-team.yaml (REQUIRED if multiple agents)
 
 ```
 
 #### 3.2 Create Manifest
 
-Create `manifest.yml`:
+Create `manifest.yaml`:
 
 ```yaml
 name: {pack-name}
@@ -358,7 +358,7 @@ files:
     - {domain}-workflow.md        # REQUIRED if multiple agents - decision trees
 
   agent-teams:
-    - {domain}-team.yml           # REQUIRED if multiple agents - team config
+    - {domain}-team.yaml          # REQUIRED if multiple agents - team config
 
 # Data files users must provide (in their bmad-core/data/ directory)
 required_user_data:
@@ -494,7 +494,7 @@ cp common/utils/workflow-management.md expansion-packs/{pack-name}/utils/
 1. Design decision trees for workflow branching
 2. Create handoff protocols to specialist agents
 3. Implement validation loops and quality checkpoints
-4. **If multiple agents**: Create team configuration in `agent-teams/{domain}-team.yml`
+4. **If multiple agents**: Create team configuration in `agent-teams/{domain}-team.yaml`
 5. **If multiple agents**: Create workflow in `workflows/{domain}-workflow.md`
 6. Ensure orchestrator references workflow-management utility
 7. Verify ALL referenced tasks exist (including core utilities)
@@ -665,7 +665,7 @@ Before declaring complete:
 
 1. [ ] Decision trees and workflow orchestration complete
 2. [ ] Knowledge base files embedded (best practices, terminology, standards)
-3. [ ] Manifest.yml reflects all components and dependencies
+3. [ ] Manifest.yaml reflects all components and dependencies
 4. [ ] All items in plan.md marked complete
 5. [ ] No orphaned tasks or templates
 
@@ -772,7 +772,7 @@ These files are automatically available to all agents and don't require user set
 ```text
 healthcare/
 ├── plan.md (Created first for approval)
-├── manifest.yml (with dependency mapping and character descriptions)
+├── manifest.yaml (with dependency mapping and character descriptions)
 ├── README.md (featuring character introductions and numbered options)
 ├── agents/
 │   ├── healthcare-orchestrator.md (Dr. Sarah Chen - YAML-in-Markdown)
@@ -798,7 +798,7 @@ healthcare/
 │   ├── clinical-trial-workflow.md (decision trees with Mermaid diagrams)
 │   └── compliance-audit-workflow.md (handoff protocols and quality gates)
 └── agent-teams/
-    └── healthcare-team.yml (coordinated team configurations)
+    └── healthcare-team.yaml (coordinated team configurations)
 
 Required user data files (bmad-core/data/):
 - medical-terminology.md (institution-specific terms and abbreviations)
@@ -1009,7 +1009,7 @@ Embedded knowledge (automatic):
 - [ ] All agent references verified (tasks, templates, data, checklists)
 - [ ] Data requirements documented with validation criteria and examples
 - [ ] README includes character introductions and numbered options explanation
-- [ ] manifest.yml reflects actual files with dependency mapping and character descriptions
+- [ ] manifest.yaml reflects actual files with dependency mapping and character descriptions
 
 **Advanced Quality Gates:**
 

@@ -150,5 +150,5 @@ workflows: null
 3. Replace all placeholders with actual values
 4. Ensure agent names match available agents in the system
 5. Verify workflow names match available workflows
-6. Save as team-[descriptor].yml or [domain]-team.yml
+6. Save as team-[descriptor].yaml or [domain]-team.yaml
 7. Place in the agent-teams directory of the appropriate location]]

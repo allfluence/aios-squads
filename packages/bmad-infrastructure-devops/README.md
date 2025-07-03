@@ -28,7 +28,7 @@ Install this expansion pack when your project requires:
 
 ### Agents
 
-- `devops.yml` - DevOps and Platform Engineering agent configuration
+- `devops.yaml` - DevOps and Platform Engineering agent configuration
 
 ### Personas
 
@@ -116,8 +116,8 @@ Before deployment:
 
 The DevOps agent can be added to team configurations:
 
-- `team-technical.yml` - For technical implementation teams
-- `team-full-org.yml` - For complete organizational teams
+- `team-technical.yaml` - For technical implementation teams
+- `team-full-org.yaml` - For complete organizational teams
 
 ## Dependencies
 
