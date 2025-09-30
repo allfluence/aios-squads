@@ -1,12 +1,12 @@
-# BMad Infrastructure DevOps Expansion Pack Knowledge Base
+# AIOS Infrastructure DevOps Expansion Pack Knowledge Base
 
 ## Overview
 
-The BMad Infrastructure DevOps expansion pack extends the BMad Method framework with comprehensive infrastructure and DevOps capabilities. It enables teams to design, implement, validate, and maintain modern cloud-native infrastructure alongside their application development efforts.
+The AIOS Infrastructure DevOps expansion pack extends the AIOS Method framework with comprehensive infrastructure and DevOps capabilities. It enables teams to design, implement, validate, and maintain modern cloud-native infrastructure alongside their application development efforts.
 
 **Version**: 1.7.0  
-**BMad Compatibility**: v4+  
-**Author**: Brian (BMad)
+**AIOS Compatibility**: v4+  
+**Author**: Brian (AIOS)
 
 ## Core Purpose
 
@@ -15,12 +15,12 @@ This expansion pack addresses the critical need for systematic infrastructure pl
 - Structured approach to infrastructure architecture design
 - Platform engineering implementation guidance
 - Comprehensive validation and review processes
-- Integration with core BMad development workflows
+- Integration with core AIOS development workflows
 - Support for cloud-native and traditional infrastructure patterns
 
 ## When to Use This Expansion Pack
 
-Use the BMad Infrastructure DevOps expansion pack when your project involves:
+Use the AIOS Infrastructure DevOps expansion pack when your project involves:
 
 - **Cloud Infrastructure Design**: AWS, Azure, GCP, or multi-cloud architectures
 - **Kubernetes and Container Orchestration**: Container platform design and implementation
@@ -71,7 +71,7 @@ Use the BMad Infrastructure DevOps expansion pack when your project involves:
 - Monitoring and Observability strategy
 - CI/CD Pipeline architecture
 - Disaster Recovery planning
-- BMad Integration points
+- AIOS Integration points
 
 #### Platform Implementation Template
 
@@ -97,7 +97,7 @@ Use the BMad Infrastructure DevOps expansion pack when your project involves:
 - Architectural escalation for complex issues
 - Advanced elicitation for deep analysis
 - Prioritized findings and recommendations
-- Integration with BMad Architecture phase
+- Integration with AIOS Architecture phase
 
 #### Validate Infrastructure Task
 
@@ -108,7 +108,7 @@ Use the BMad Infrastructure DevOps expansion pack when your project involves:
 - Architecture Design Review Gate
 - Compliance percentage tracking
 - Remediation planning
-- BMad integration assessment
+- AIOS integration assessment
 
 ### 4. Infrastructure Validation Checklist
 
@@ -126,12 +126,12 @@ A comprehensive 16-section checklist covering:
 8. CI/CD Infrastructure - Pipelines, environments, deployments
 9. Networking & Connectivity - Architecture, security, DNS
 10. Compliance & Governance - Standards, auditing, policies
-11. BMad Integration - Agent support, workflow alignment
+11. AIOS Integration - Agent support, workflow alignment
 12. Architecture Documentation - Diagrams, decisions, maintenance
 
 **Platform Engineering (Sections 13-16)**: 13. Container Platform - Kubernetes setup, RBAC, networking 14. GitOps Workflows - Repository structure, deployment patterns 15. Service Mesh - Traffic management, security, observability 16. Developer Experience - Self-service, documentation, tooling
 
-## Integration with BMad Flow
+## Integration with AIOS Flow
 
 ### Workflow Integration Points
 
@@ -303,6 +303,6 @@ A comprehensive 16-section checklist covering:
 
 ## Conclusion
 
-The BMad Infrastructure DevOps expansion pack provides a comprehensive framework for modern infrastructure and platform engineering. By following its structured approach and leveraging the provided tools and templates, teams can build reliable, scalable, and secure infrastructure that accelerates application delivery while maintaining operational excellence.
+The AIOS Infrastructure DevOps expansion pack provides a comprehensive framework for modern infrastructure and platform engineering. By following its structured approach and leveraging the provided tools and templates, teams can build reliable, scalable, and secure infrastructure that accelerates application delivery while maintaining operational excellence.
 
-For support and updates, refer to the main BMad Method documentation or contact the BMad community.
+For support and updates, refer to the main AIOS Method documentation or contact the AIOS community.

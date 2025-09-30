@@ -266,9 +266,9 @@ sections:
       - Cost Monitoring & Reporting
       - Optimization Recommendations
 
-  - id: bmad-integration
-    title: BMad Integration Architecture
-    instruction: Design infrastructure to specifically support other BMad agents and their workflows. This ensures the infrastructure enables the entire BMad methodology.
+  - id: aios-integration
+    title: AIOS Integration Architecture
+    instruction: Design infrastructure to specifically support other AIOS agents and their workflows. This ensures the infrastructure enables the entire AIOS methodology.
     sections:
       - id: dev-agent-support
         title: Development Agent Support
