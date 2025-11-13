@@ -57,7 +57,7 @@ commands:
 
 dependencies:
   tasks:
-    - collect-social.md
+    - social-specialist-collect-social.md
   data:
     - data/platform-support.yaml
 

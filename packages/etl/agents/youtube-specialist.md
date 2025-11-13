@@ -60,8 +60,8 @@ commands:
 
 dependencies:
   tasks:
-    - collect-youtube.md
-    - collect-podcasts.md
+    - youtube-specialist-collect-youtube.md
+    - youtube-specialist-collect-podcasts.md
   scripts:
     - scripts/collectors/youtube-collector.js
     - scripts/collectors/podcast-collector.js

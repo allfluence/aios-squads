@@ -1,9 +1,0 @@
-name: meeting-notes
-version: 1.0.0
-short-title: Meeting Notes Assistant
-description: >-
-  This expansion pack provides tools and agents for organizing, documenting,
-  and tracking meeting notes and action items. It helps teams capture decisions,
-  assign follow-ups, and maintain clear meeting records.
-author: AIOS Team (Test)
-slashPrefix: meetingNotes

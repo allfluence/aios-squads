@@ -58,7 +58,7 @@ commands:
 
 dependencies:
   tasks:
-    - collect-blogs.md
+    - web-specialist-collect-blogs.md
   scripts:
     - scripts/collectors/web-collector.js
     - scripts/extractors/article-extractor.js

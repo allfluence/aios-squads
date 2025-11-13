@@ -78,11 +78,11 @@ commands:
 dependencies:
   tasks:
     - collect-all-sources.md
-    - collect-youtube.md
-    - collect-blogs.md
-    - collect-podcasts.md
+    - youtube-specialist-collect-youtube.md
+    - web-specialist-collect-blogs.md
+    - youtube-specialist-collect-podcasts.md
     - collect-books.md
-    - collect-social.md
+    - social-specialist-collect-social.md
     - validate-collection.md
     - chunk-and-index.md
     - resume-collection.md

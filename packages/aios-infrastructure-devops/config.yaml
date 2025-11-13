@@ -1,9 +1,0 @@
-name: aios-infrastructure-devops
-version: 1.10.0
-short-title: Infrastructure DevOps Pack
-description: >-
-  This expansion pack extends AIOS-FULLSTACK with comprehensive infrastructure and
-  DevOps capabilities. It's designed for teams that need to define, implement,
-  and manage cloud infrastructure alongside their application development.
-author: AIOS Team
-slashPrefix: aiosInfraDevOps
